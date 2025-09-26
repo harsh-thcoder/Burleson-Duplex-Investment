@@ -28,16 +28,16 @@ export default function Hero() {
 
         <div className="hero-stats">
           <div className="stat-card">
-            <h3>$624,900</h3>
-            <p>Investment Price</p>
+            <h3>3.75%</h3>
+            <p>Special Rate</p>
           </div>
           <div className="stat-card">
             <h3>3.75%</h3>
             <p>Special Rate</p>
           </div>
           <div className="stat-card">
-            <h3>High ROI</h3>
-            <p>Proven Returns</p>
+            <h3>3.75%</h3>
+            <p>Special Rate</p>
           </div>
         </div>
       </div>

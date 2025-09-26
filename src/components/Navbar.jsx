@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const navItems = ["Home", "Features", "Pricing", "About", "Contact"];
+const navItems = ["Home", "Investment Overview", "Contact Us", "Gallery"];
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);

@@ -1,65 +1,96 @@
+/* 🔹 Section container */
 .highlights-section {
   width: 1280px;
   margin: 0 auto;
   padding: 50px 0;
+  font-family: "Poppins", sans-serif;
 }
 
+/* 🔹 Grid layout */
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 44px;
+  gap: 30px 40px; /* row gap | column gap */
 }
 
+/* 🔹 Each blue box */
 .highlight-box {
-  background: #fff;
+  background: #09156D;
   border-radius: 15px;
-  padding: 41px 40px;
+  padding: 30px 28px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* keep content aligned to top-left */
   gap: 10px;
+  width: 100%;
+  height: auto; /* box grows naturally with content */
 }
 
+/* 🔹 Special centered box */
 .highlight-box.single {
   grid-column: span 2;
   justify-self: center;
-  width: 50%; /* smaller centered box */
+  width: 50%; /* centered smaller box */
 }
 
-.highlight-icon {
-  font-size: 32px;
-  color: #000;
+/* 🔹 Icons */
+.highlight-icon,
+.home-image {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 8px;
 }
 
+/* 🔹 Top label (Unit A, Unit B, etc.) */
 .highlight-label {
-  color: #ff9c07; /* orange accent */
+  color: #ff9c07;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* 🔹 Price in orange */
+.highlight-price {
+  color: #ff9c07;
   font-weight: 600;
   font-size: 18px;
   margin: 0;
 }
 
-.highlight-price {
-  color: #ff9c07;
+/* 🔹 Main title (beds, finishes, etc.) */
+.highlight-title {
+  color: #ffffff;
   font-weight: 600;
   font-size: 20px;
   margin: 0;
 }
 
-.highlight-title {
-  font-weight: 600;
-  font-size: 22px;
-  margin: 0;
-}
-
+/* 🔹 Description */
 .highlight-desc {
+  color: #ffffff;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 22px;
   margin: 0;
 }
 
-.home-image {
-  Width: 54.49px;
-  Height: 59.59px;
+/* 🔹 Responsive design */
+@media (max-width: 1024px) {
+  .highlights-section {
+    width: 95%;
+  }
+  .highlights-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr; /* stack boxes on mobile */
+  }
+  .highlight-box.single {
+    width: 100%; /* full width on small screens */
+  }
 }
