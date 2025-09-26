@@ -1,0 +1,135 @@
+.package-section {
+  background: #f7f7f7;
+  padding: 4rem 2rem;
+}
+
+.package-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.package-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.package-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.package-content .highlight {
+  color: #f6b100;
+}
+
+.package-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Features */
+.package-features .feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.package-features .icon {
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.package-features .icon.blue {
+  background: #0d1c8d;
+}
+
+.package-features .icon.yellow {
+  background: #f6b100;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Form */
+.package-form {
+  flex: 1;
+  min-width: 350px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.package-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.package-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.package-form input,
+.package-form textarea {
+  margin-top: 0.3rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.package-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background: #0d1c8d;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #0b1670;
+}
+
+.privacy-note {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.8rem;
+  text-align: center;
+}

@@ -1,0 +1,87 @@
+.newsletter-section {
+  background: #0d1c8d; /* Deep blue background */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.newsletter-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f6b100; /* Yellow text */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.newsletter-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.newsletter-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e5e5e5;
+}
+
+/* Form Styling */
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0 0.75rem;
+  flex: 1;
+  min-width: 260px;
+}
+
+.input-group .icon {
+  margin-right: 0.5rem;
+  color: #555;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background: #f6b100;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #dca000;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 1rem;
+}

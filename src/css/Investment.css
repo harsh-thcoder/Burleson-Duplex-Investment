@@ -1,0 +1,131 @@
+.investment-section {
+  background: #f7f7f7;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.investment-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.investment-header .highlight {
+  color: #f6b100;
+}
+
+.investment-header p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Grid Layout (2x2 on desktop, 1x4 on mobile) */
+.investment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .investment-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* CTA Section (Blue Background) */
+.cta-section {
+  background: #0d1c8d; /* Blue background */
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.cta-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .primary-btn {
+  background: #f6b100;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cta-buttons .primary-btn:hover {
+  background: #e0a400;
+}
+
+.cta-buttons .secondary-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cta-buttons .secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

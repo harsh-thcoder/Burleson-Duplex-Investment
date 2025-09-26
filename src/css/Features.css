@@ -1,0 +1,65 @@
+.highlights-section {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px;
+}
+
+.highlight-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 41px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight-box.single {
+  grid-column: span 2;
+  justify-self: center;
+  width: 50%; /* smaller centered box */
+}
+
+.highlight-icon {
+  font-size: 32px;
+  color: #000;
+}
+
+.highlight-label {
+  color: #ff9c07; /* orange accent */
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+
+.highlight-price {
+  color: #ff9c07;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.highlight-title {
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+}
+
+.highlight-desc {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.home-image {
+  Width: 54.49px;
+  Height: 59.59px;
+}

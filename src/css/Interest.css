@@ -1,0 +1,83 @@
+/* Main section */
+.interest-section {
+  width: 100%;               /* Full width background */
+  background: #09156D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  opacity: 1;
+  padding: 60px 20px;        /* Smaller height with padding */
+  box-sizing: border-box;
+}
+
+/* Limit content width (centered) */
+.interest-section > * {
+  max-width: 1100px;         /* Keeps content aligned */
+}
+
+/* Limited time offer badge */
+.offer-badge {
+  width: 359px;
+  height: 64px;
+  background: #0c1f80;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFD700;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+/* Timer icon */
+.highlight-icon {
+  width: 24px;   /* Adjust based on your image */
+  height: 24px;  /* Keeps it square */
+  object-fit: contain;
+  display: block;
+}
+
+/* Interest Rate */
+.interest-rate {
+  font-size: 36px;           /* slightly smaller */
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 12px;
+}
+
+.interest-desc {
+  font-size: 16px;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #E0E0E0;
+}
+
+/* Features grid */
+.features {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background: #0c1f80;
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  min-width: 200px;
+}
+
+.checkmark {
+  color: #FFD700;
+  font-size: 18px;
+}

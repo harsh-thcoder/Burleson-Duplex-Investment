@@ -1,0 +1,26 @@
+.next-section {
+  width: 1155px;
+  margin: 0 auto; /* centers the section horizontally */
+  text-align: center;
+  padding: 50px 0;
+}
+
+.next-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 144px;
+  letter-spacing: 0;
+  margin: 0;
+  height: 144px;
+}
+
+.next-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 71px;
+  letter-spacing: 0;
+  margin: 0;
+  height: 142px;
+}
