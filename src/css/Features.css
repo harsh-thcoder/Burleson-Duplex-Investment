@@ -1,8 +1,9 @@
 /* 🔹 Section container */
 .highlights-section {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50px 20px; /* added horizontal padding for mobile */
   font-family: "Poppins", sans-serif;
 }
 
@@ -15,23 +16,29 @@
 
 /* 🔹 Each blue box */
 .highlight-box {
-  background: #09156D;
+  background: #09156d;
   border-radius: 15px;
   padding: 30px 28px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* keep content aligned to top-left */
+  align-items: flex-start;
   gap: 10px;
   width: 100%;
-  height: auto; /* box grows naturally with content */
+  height: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* 🔹 Special centered box */
 .highlight-box.single {
   grid-column: span 2;
   justify-self: center;
-  width: 50%; /* centered smaller box */
+  width: 60%;
 }
 
 /* 🔹 Icons */
@@ -76,21 +83,63 @@
   margin: 0;
 }
 
-/* 🔹 Responsive design */
+/* ===================================
+   📱 Responsive Design
+=================================== */
+
+/* Tablet (2 columns, reduced gap) */
 @media (max-width: 1024px) {
   .highlights-section {
-    width: 95%;
+    padding: 40px 16px;
   }
+
   .highlights-grid {
     gap: 24px;
   }
+
+  .highlight-box.single {
+    width: 80%; /* wider on tablets */
+  }
 }
 
+/* Mobile (stacked, 1 column) */
 @media (max-width: 768px) {
   .highlights-grid {
-    grid-template-columns: 1fr; /* stack boxes on mobile */
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
+
   .highlight-box.single {
-    width: 100%; /* full width on small screens */
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  .highlight-title {
+    font-size: 18px;
+  }
+
+  .highlight-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Extra small (very narrow phones) */
+@media (max-width: 480px) {
+  .highlight-box {
+    padding: 20px;
+  }
+
+  .highlight-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .highlight-title {
+    font-size: 16px;
+  }
+
+  .highlight-desc {
+    font-size: 13px;
   }
 }

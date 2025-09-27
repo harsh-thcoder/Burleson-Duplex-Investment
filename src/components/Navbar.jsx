@@ -5,8 +5,10 @@ import {
   Typography,
   IconButton,
   Button,
-  Menu,
-  MenuItem,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
   Box,
   Container,
 } from "@mui/material";
@@ -15,47 +17,43 @@ import MenuIcon from "@mui/icons-material/Menu";
 const navItems = ["Home", "Investment Overview", "Contact Us", "Gallery"];
 
 export default function Navbar() {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState(false);
 
-  const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
-  const handleMenuClose = () => setAnchorEl(null);
+  const toggleDrawer = (state) => () => {
+    setOpen(state);
+  };
 
   return (
     <AppBar
-      position="absolute"           // overlay Hero image
-      elevation={1}                 // subtle shadow
-      sx={{ bgcolor: "#ffffff", top: 0 }} // white background
+      position="absolute"
+      elevation={1}
+      sx={{ bgcolor: "#ffffff", top: 0 }}
     >
       <Container
         maxWidth={false}
         sx={{
-          width: "1440px",
-          height: "80px",
+          width: "100%",
+          height: { xs: "64px", md: "80px" },
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "20px 80px 20px 83px",
+          px: { xs: 2, md: "80px" },
         }}
       >
         {/* LEFT: Logo + Text */}
-        <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <img
-            src="/logo.png"
-            alt="Logo"
-            style={{ height: 40 }}
-          />
+        <Box sx={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <img src="/logo.png" alt="Logo" style={{ height: 32 }} />
           <Typography
             variant="h6"
             sx={{
-              fontFamily: "Poppins", 
+              fontFamily: "Poppins",
               fontWeight: 500,
-              fontSize: "28px",
-              lineHeight: "36px",
-              letterSpacing: "0%",
-              color: "#000", // black text
+              fontSize: { xs: "16px", md: "24px" },
+              lineHeight: { xs: "20px", md: "32px" },
+              color: "#000",
             }}
           >
-            Burleson Duplex Investment
+            Ft.Worth Duplex Investment
           </Typography>
         </Box>
 
@@ -68,22 +66,24 @@ export default function Navbar() {
           ))}
         </Box>
 
-        {/* RIGHT: Mobile Menu */}
+        {/* RIGHT: Mobile Drawer Menu */}
         <Box sx={{ display: { xs: "flex", md: "none" } }}>
-          <IconButton color="inherit" onClick={handleMenuOpen}>
+          <IconButton onClick={toggleDrawer(true)}>
             <MenuIcon sx={{ color: "#000" }} />
           </IconButton>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={handleMenuClose}
+          <Drawer
+            anchor="left"
+            open={open}
+            onClose={toggleDrawer(false)}
           >
-            {navItems.map((item) => (
-              <MenuItem key={item} onClick={handleMenuClose}>
-                {item}
-              </MenuItem>
-            ))}
-          </Menu>
+            <Box sx={{ width: 250 }}>
+              {navItems.map((item) => (
+                <ListItem button key={item} onClick={toggleDrawer(false)}>
+                  <ListItemText primary={item} />
+                </ListItem>
+              ))}
+            </Box>
+          </Drawer>
         </Box>
       </Container>
     </AppBar>

@@ -1,26 +1,50 @@
 .next-section {
-  width: 1155px;
-  margin: 0 auto; /* centers the section horizontally */
+  width: 100%;
+  max-width: 1155px;
+  margin: 0 auto;
   text-align: center;
-  padding: 50px 0;
+  padding: 60px 20px; /* add padding for mobile */
 }
 
 .next-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 80px;
-  line-height: 144px;
-  letter-spacing: 0;
-  margin: 0;
-  height: 144px;
+  font-size: 48px;       /* desktop default */
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #000;
 }
 
 .next-subtitle {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 40px;
-  line-height: 71px;
-  letter-spacing: 0;
-  margin: 0;
-  height: 142px;
+  font-size: 20px;       /* desktop default */
+  line-height: 1.5;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 📱 Tablet */
+@media (max-width: 992px) {
+  .next-title {
+    font-size: 36px;
+  }
+
+  .next-subtitle {
+    font-size: 18px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .next-title {
+    font-size: 28px;
+  }
+
+  .next-subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
 }

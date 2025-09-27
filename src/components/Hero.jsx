@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/Hero.css"; // Ensure you have the CSS file for styling
-import heroImage from "../assets/banner.jpg"; // update with your actual file name
+import "../css/Hero.css";
+import heroImage from "../assets/banner.jpg";
 
 export default function Hero() {
   return (
